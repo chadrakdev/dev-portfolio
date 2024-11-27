@@ -2,11 +2,11 @@ import './App.css'
 
 const App = () => {
 
-  return (
-    <>
+	return (
+		<>
 
-    </>
-  )
+		</>
+	)
 }
 
 export default App
