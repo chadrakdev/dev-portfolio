@@ -19,7 +19,8 @@ export default [
 		"rules": {
 			"react/react-in-jsx-scope": "off",
 			"react/jsx-uses-react": "off",
-			"indent": ["error", "tab"]
+			"indent": ["error", "tab"],
+			"react/prop-types": "off"
 		}
 	}
 ];
