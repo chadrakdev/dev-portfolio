@@ -18,8 +18,8 @@ export const darkTheme = createTheme({
 			styleOverrides: {
 				a: {
 					textDecoration: 'none',
-                    color: 'inherit',
-                    padding: '.5rem',
+					color: 'inherit',
+					padding: '.5rem',
 					'&:hover': {
 						backgroundColor: '#ffffff26',
 						borderRadius: '0.2rem'
@@ -48,8 +48,8 @@ export const lightTheme = createTheme({
 			styleOverrides: {
 				a: {
 					textDecoration: 'none',
-                    color: 'inherit',
-                    padding: '.5rem',
+					color: 'inherit',
+					padding: '.5rem',
 					'&:hover': {
 						backgroundColor: '#00000026',
 						borderRadius: '0.2rem'
