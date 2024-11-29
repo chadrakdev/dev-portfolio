@@ -14,14 +14,14 @@ const StyledNav = styled(AppBar)(({ theme }) => ({
 	boxShadow: 'none'
 }))
 
-const StyledLogoLink = styled(Link)(({}) => ({
+const StyledLogoLink = styled(Link)(() => ({
 	marginInline: '1rem',
 	'&:hover': {
 		backgroundColor: 'transparent'
 	}
 }))
 
-const StyledLink = styled(Link)(({}) => ({
+const StyledLink = styled(Link)(() => ({
 	marginInline: '0.2rem'
 }))
 
@@ -46,11 +46,8 @@ const NavBar: React.FC<NavBarProps> = ({ onToggleTheme, isDarkMode }) => {
 				<StyledLink to="work">work</StyledLink>
 				<StyledLink to="projects">projects</StyledLink>
 				<StyledLink to="blog">blog</StyledLink>
-				{/* <Button variant="contained" onClick={onToggleTheme}>
-					{isDarkModeOutlined ? 'Enable Light ModeOutlined' : 'Enable Dark ModeOutlined'}
-				</Button> */}
 				<IconButton onClick={onToggleTheme}>
-				{isDarkMode ? <StyledLightMode /> : <StyledDarkMode />}
+					{isDarkMode ? <StyledLightMode /> : <StyledDarkMode />}
 				</IconButton>
 			</div>
 		</StyledNav>
