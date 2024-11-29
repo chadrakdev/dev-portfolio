@@ -1,13 +1,24 @@
 import { createTheme } from '@mui/material/styles';
 
+declare module '@mui/material/styles' {
+	interface Palette {
+		navBackground?: string;
+	}
+	interface PaletteOptions {
+		navBackground?: string;
+	}
+}
+
 export const darkTheme = createTheme({
 	palette: {
 		mode: 'dark',
 		background: {
 			default: '#18181b',
 		},
+		navBackground: '#18181bfa',
 		text: {
 			primary: '#d4d4d8',
+			secondary: '#787884',
 		},
 	},
 	typography: {
@@ -19,14 +30,13 @@ export const darkTheme = createTheme({
 				a: {
 					textDecoration: 'none',
 					color: 'inherit',
-					padding: '.5rem',
 					'&:hover': {
 						backgroundColor: '#ffffff26',
 						borderRadius: '0.2rem'
 					},
-				},
+				}
 			},
-		},
+		}
 	},
 });
 
@@ -36,8 +46,10 @@ export const lightTheme = createTheme({
 		background: {
 			default: '#f4f4f5',
 		},
+		navBackground: '#f4f4f5eb',
 		text: {
 			primary: '#18181b',
+			secondary: '#373743',
 		},
 	},
 	typography: {
@@ -49,12 +61,11 @@ export const lightTheme = createTheme({
 				a: {
 					textDecoration: 'none',
 					color: 'inherit',
-					padding: '.5rem',
 					'&:hover': {
 						backgroundColor: '#00000026',
 						borderRadius: '0.2rem'
 					},
-				},
+				}
 			},
 		},
 	},
