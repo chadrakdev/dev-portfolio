@@ -28,16 +28,14 @@ const Work = () => {
 	return (
 		<StyledSection key="work">
 			<StyledHeading sx={{ paddingBottom: '1rem' }}>Work</StyledHeading>
-			{work.map(data => {
-				return (
-					<StyledItemWrapper key={data.id}>
-						<StyledHeading>{data.company}</StyledHeading>
-						<StyledSubheading>{data.position}</StyledSubheading>
-						<StyledSubheading sx={{ paddingBottom: '0.5rem' }}>{data.start} - {data.isCurrent ? "Current" : data.end}</StyledSubheading>
-						<StyledText>{data.description}</StyledText>
-					</StyledItemWrapper>
-				)
-			})}
+			{work.map(data => 
+				<StyledItemWrapper key={data.id}>
+					<StyledHeading>{data.company}</StyledHeading>
+					<StyledSubheading>{data.position}</StyledSubheading>
+					<StyledSubheading sx={{ paddingBottom: '0.5rem' }}>{data.start} - {data.isCurrent ? "Current" : data.end}</StyledSubheading>
+					<StyledText>{data.description}</StyledText>
+				</StyledItemWrapper>
+			)}
 		</StyledSection>
 	)
 }
