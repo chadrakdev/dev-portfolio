@@ -1,6 +1,6 @@
-import { List, ListItem, styled, Typography } from "@mui/material"
+import { styled, Box, List, ListItem, Typography } from "@mui/material"
 
-const StyledSection = styled(Typography)(() => ({
+const StyledSection = styled(Box)(() => ({
 	paddingBottom: '3rem'
 }))
 
