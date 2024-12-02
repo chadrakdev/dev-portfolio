@@ -1,6 +1,8 @@
-import { List, ListItem, styled, Typography } from "@mui/material"
+import { styled, Box, List, ListItem, Typography } from "@mui/material"
+import { work } from "../../data/work.data"
+import { projects } from "../../data/projects.data"
 
-const StyledSection = styled(Typography)(() => ({
+const StyledSection = styled(Box)(() => ({
 	paddingBottom: '3rem'
 }))
 
@@ -41,6 +43,10 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
 	}
 }))
 
+const StyledItemWrapper = styled(Box)(() => ({
+	paddingBottom: '0rem'
+}))
+
 const Home = () => {
 	return (
 		<main>
@@ -54,21 +60,33 @@ const Home = () => {
 
 			<StyledSection key="work">
 				<StyledHeading sx={{ paddingBottom: '1rem' }}>Work</StyledHeading>
-				<StyledHeading>Nurtur Tech</StyledHeading>
-				<StyledSubheading>3rd Line Support</StyledSubheading>
-				<StyledSubheading sx={{ paddingBottom: '0.5rem' }}>Nov 2023 - Current</StyledSubheading>
-				<StyledText>Currently, I am working in application support at Nurtur Tech investigating and resolving software issues and developing support applications.</StyledText>
+				{work
+					.filter(data => data.isCurrent)
+					.map(data =>
+						<StyledItemWrapper key={data.id}>
+							<StyledHeading>{data.company}</StyledHeading>
+							<StyledSubheading>{data.position}</StyledSubheading>
+							<StyledSubheading sx={{ paddingBottom: '0.5rem' }}>{data.start} - {data.isCurrent ? "Current" : data.end}</StyledSubheading>
+							<StyledText>{data.description}</StyledText>
+						</StyledItemWrapper>
+					)}
 			</StyledSection>
 
 			<StyledSection key="projects">
 				<StyledHeading sx={{ paddingBottom: '1rem' }}>Projects</StyledHeading>
-				<StyledHeading>Game Library API</StyledHeading>
-				<StyledList disablePadding>
-					<StyledListItem disableGutters>C#</StyledListItem>
-					<StyledListItem disableGutters>.NET</StyledListItem>
-					<StyledListItem disableGutters>MVC</StyledListItem>
-				</StyledList>
-				<StyledText>REST API designed to users to update and query game data, held in an in-memory database</StyledText>
+				{projects[0] && (
+					<StyledItemWrapper>
+						<StyledHeading>{projects[0].title}</StyledHeading>
+						<StyledList disablePadding>
+							<StyledList disablePadding>
+								{projects[0].tags.map(tag => (
+									<StyledListItem key={tag} disableGutters>{tag}</StyledListItem>
+								))}
+							</StyledList>
+						</StyledList>
+						<StyledText>{projects[0].description}</StyledText>
+					</StyledItemWrapper>
+				)}
 			</StyledSection>
 		</main>
 	)
