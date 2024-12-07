@@ -19,7 +19,7 @@ export const projects: ProjectHistory[] = [
 		id: 3,
 		title: "Mars Rover",
 		url: "https://github.com/chadrakdev/MarsRover",
-		tags: ["Java", "Console"],
+		tags: ["Java"],
 		description: "A console app simulating a rover navigating Mars plateaus to collect research samples, built with Java."
 	}
 ];
