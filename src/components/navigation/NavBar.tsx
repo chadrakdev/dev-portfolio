@@ -1,7 +1,8 @@
 import { styled } from "@mui/system";
-import { Link } from "react-router-dom"
 import { AppBar, IconButton } from "@mui/material"
-import { Code, LightModeOutlined, DarkModeOutlined } from "@mui/icons-material";
+import { Code } from "@mui/icons-material";
+import { LightMode, DarkMode } from "../styled/StyledIcons";
+import { LinkIcon, LinkText } from "../styled/StyledLinks";
 
 const StyledNav = styled(AppBar)(({ theme }) => ({
 	display: 'flex',
@@ -17,25 +18,6 @@ const StyledNav = styled(AppBar)(({ theme }) => ({
 	position: 'sticky'
 }))
 
-const StyledLogoLink = styled(Link)(() => ({
-	padding: '0.5rem 0',
-	'&:hover': {
-		backgroundColor: 'transparent'
-	}
-}))
-
-const StyledLink = styled(Link)(() => ({
-	padding: '0.5rem'
-}))
-
-const StyledLightMode = styled(LightModeOutlined)(({ theme }) => ({
-	color: theme.palette.text.primary
-}))
-
-const StyledDarkMode = styled(DarkModeOutlined)(({ theme }) => ({
-	color: theme.palette.text.primary
-}))
-
 interface NavBarProps {
 	onToggleTheme: () => void;
 	isDarkMode: boolean;
@@ -44,13 +26,13 @@ interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = ({ onToggleTheme, isDarkMode }) => {
 	return (
 		<StyledNav>
-			<StyledLogoLink to="/"><Code /></StyledLogoLink>
+			<LinkIcon to="/"><Code /></LinkIcon>
 			<div>
-				<StyledLink to="work">work</StyledLink>
-				<StyledLink to="projects">projects</StyledLink>
-				<StyledLink to="blog">blog</StyledLink>
+				<LinkText to="work">work</LinkText>
+				<LinkText to="projects">projects</LinkText>
+				<LinkText to="blog">blog</LinkText>
 				<IconButton onClick={onToggleTheme}>
-					{isDarkMode ? <StyledLightMode /> : <StyledDarkMode />}
+					{isDarkMode ? <LightMode /> : <DarkMode />}
 				</IconButton>
 			</div>
 		</StyledNav>
