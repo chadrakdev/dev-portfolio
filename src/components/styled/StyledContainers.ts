@@ -17,14 +17,18 @@ export const PageSection = styled(Box)(() => ({
 	paddingBottom: '3rem'
 }))
 
-export const StyledList = styled(List)(() => ({
+export const ContentSection = styled(Box)(() => ({
+	paddingBottom: '2rem'
+}))
+
+export const TagList = styled(List)(() => ({
 	display: 'flex',
 	flexDirection: 'row',
 	justifyContent: 'start',
-	padding: '0.3rem 0'
+	padding: '0.5rem 0'
 }))
 
-export const StyledListItem = styled(ListItem)(({ theme }) => ({
+export const TagListItem = styled(ListItem)(({ theme }) => ({
 	fontWeight: 'normal',
 	fontSize: '0.8rem',
 	color: theme.palette.text.secondary,

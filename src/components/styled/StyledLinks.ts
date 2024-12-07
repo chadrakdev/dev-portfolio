@@ -1,4 +1,5 @@
-import { styled, Link } from "@mui/material";
+import { styled } from "@mui/material";
+import { Link } from "react-router-dom"
 
 export const LinkIcon = styled(Link)(() => ({
 	padding: '0.5rem 0',
