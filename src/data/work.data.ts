@@ -5,7 +5,7 @@ export const work: WorkHistory[] = [
 		id: 1,
 		company: "Nurtur Tech",
 		position: "3rd Line Software Support",
-		start: "November 2023",
+		start: "Nov 2023",
 		isCurrent: true,
 		description: "Collaborated with development teams to improve processes and tooling for service desk agents, supported applications to enhance stability and performance, and resolved complex software issues to meet SLA targets.",
 		responsibilities: [
@@ -21,8 +21,8 @@ export const work: WorkHistory[] = [
 		id: 2,
 		company: "TechReturners & Capita",
 		position: "Software Development Trainee (Fixed Term)",
-		start: "October 2022",
-		end: "October 2023",
+		start: "Oct 2022",
+		end: "Oct 2023",
 		isCurrent: false,
 		description: "Strengthened programming and problem-solving skills, developed full-stack applications in cross-functional teams, and implemented secure APIs with Test-Driven Development practices.",
 		responsibilities: [
@@ -36,8 +36,8 @@ export const work: WorkHistory[] = [
 		id: 3,
 		company: "BGC Partners",
 		position: "Software Engineer (Internship)",
-		start: "July 2022",
-		end: "September 2022",
+		start: "Jul 2022",
+		end: "Sep 2022",
 		isCurrent: false,
 		description: "Worked on feature expansions and legacy systems in a microservices architecture, meeting business needs with clean code and creating intuitive, visually appealing interfaces with React.",
 		responsibilities: [
@@ -51,8 +51,8 @@ export const work: WorkHistory[] = [
 		id: 4,
 		company: "Nurtur Tech",
 		position: "Digital Design Executive",
-		start: "September 2021",
-		end: "July 2022",
+		start: "Sep 2021",
+		end: "Jul 2022",
 		isCurrent: false,
 		description: "Designed responsive HTML email templates, maintained ASP.NET webpages, and provided client support, including troubleshooting, demos, and training.",
 		responsibilities: [
