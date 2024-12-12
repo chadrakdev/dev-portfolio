@@ -3,7 +3,6 @@ import { darkTheme, lightTheme } from './theme'
 import { ThemeProvider } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import { AppContaine, PageContainer } from './components/styled/StyledContainers'
 import AppLayout from './components/layouts/AppLayout'
 import PageLayout from './components/layouts/PageLayout'
 import NavBar from './components/navigation/NavBar'
@@ -11,6 +10,7 @@ import Home from './components/pages/Home'
 import Work from './components/pages/Work'
 import Projects from './components/pages/Projects'
 import Blog from './components/pages/Blog'
+import Footer from './components/footer/Footer'
 
 const App = () => {
 	const [isDarkMode, setIsDarkMode] = useState(true);
@@ -33,6 +33,7 @@ const App = () => {
 							<Route path="/blog" element={<Blog />} />
 						</Routes>
 					</PageLayout>
+					<Footer />
 				</AppLayout>
 			</Router>
 		</ThemeProvider>
