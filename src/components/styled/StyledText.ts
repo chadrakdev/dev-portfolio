@@ -1,10 +1,11 @@
 import { styled, Typography } from "@mui/material";
 
-export const Heading = styled(Typography)<{ hasPadding?: boolean }>(
-	({ hasPadding }) => ({
-	  fontWeight: "bold",
-	  paddingBottom: hasPadding ? "1rem" : "0"
-	}))
+export const Heading = styled(Typography, {
+	shouldForwardProp: (prop) => prop !== "hasPadding",
+})<{ hasPadding?: boolean }>(({ hasPadding }) => ({
+	fontWeight: "bold",
+	paddingBottom: hasPadding ? "1rem" : "0",
+}));
 
 export const Subhead = styled(Typography)(({ theme }) => ({
 	fontWeight: 'normal',
