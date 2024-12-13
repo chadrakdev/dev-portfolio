@@ -7,7 +7,7 @@ const StyledFooter = styled(Container)(() => ({
 
 const Footer = () => {
 	return (
-		<StyledFooter>
+		<StyledFooter disableGutters>
 			<Text>
                 © 2024 | Chadrak Holondo
 			</Text>
