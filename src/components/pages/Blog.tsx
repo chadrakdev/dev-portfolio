@@ -1,9 +1,10 @@
+import { AnimatedContainer } from "../styled/StyledContainers"
 
 const Blog = () => {
 	return (
-		<div>
+		<AnimatedContainer>
       
-		</div>
+		</AnimatedContainer>
 	)
 }
 
