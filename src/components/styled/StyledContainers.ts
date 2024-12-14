@@ -1,4 +1,5 @@
 import { styled, Box, Container, List, ListItem } from "@mui/material";
+import { fadeInAnimation } from "../styled/Animations";
 
 export const AppContainer = styled(Container)(({ theme }) => ({
 	maxWidth: "80%",
@@ -19,6 +20,12 @@ export const PageSection = styled(Box)(() => ({
 
 export const ContentSection = styled(Box)(() => ({
 	paddingBottom: '2rem'
+}))
+
+export const AnimatedContainer = styled(Box)(() => ({
+	animation: `${fadeInAnimation} 0.8s ease`,
+	animationFillMode: "both",
+	opacity: 0,
 }))
 
 export const TagList = styled(List)(() => ({
