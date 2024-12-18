@@ -13,7 +13,7 @@ const Projects = () => {
 						<Heading>{data.title}</Heading>
 						<Subhead>
   								Technologies: {" "}
-							{projects[0].tags
+							{data.tags
 								.map((tag, index, array) => (
 									<span key={index}>
 										{tag}
