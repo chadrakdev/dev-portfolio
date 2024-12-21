@@ -1,6 +1,6 @@
 import { work } from "../../data/work.data"
 import { projects } from "../../data/projects.data"
-import { PageSection, ContentSection, TagList, TagListItem } from "../styled/StyledContainers"
+import { PageSection, ContentSection } from "../styled/StyledContainers"
 import { Heading, Subhead, Text } from "../styled/StyledText"
 import { AnimatedContainer } from "../styled/StyledContainers"
 
@@ -35,13 +35,17 @@ const Home = () => {
 					{projects[0] && (
 						<ContentSection>
 							<Heading>{projects[0].title}</Heading>
-							<TagList disablePadding>
-								<TagList disablePadding>
-									{projects[0].tags.map(tag => (
-										<TagListItem key={tag} disableGutters>{tag}</TagListItem>
+							<Subhead>
+  								Technologies: {" "}
+								{projects[0].tags
+									.map((tag, index, array) => (
+										<span key={index}>
+											{tag}
+											{index < array.length - 1 && ", "}
+										</span>
 									))}
-								</TagList>
-							</TagList>
+							</Subhead>
+
 							<Text>{projects[0].description}</Text>
 						</ContentSection>
 					)}

@@ -1,6 +1,6 @@
-import { Heading, Text } from "../styled/StyledText"
+import { Heading, Subhead, Text } from "../styled/StyledText"
 import { projects } from "../../data/projects.data"
-import { PageSection, ContentSection, TagList, TagListItem } from "../styled/StyledContainers"
+import { PageSection, ContentSection } from "../styled/StyledContainers"
 import { AnimatedContainer } from "../styled/StyledContainers"
 
 const Projects = () => {
@@ -11,13 +11,16 @@ const Projects = () => {
 				{projects.map(data =>
 					<ContentSection key={data.id}>
 						<Heading>{data.title}</Heading>
-						{data.tags.length > 0 && (
-							<TagList disablePadding>
-								{data.tags.map(tag => (
-									<TagListItem key={tag} disableGutters>{tag}</TagListItem>
+						<Subhead>
+  								Technologies: {" "}
+							{data.tags
+								.map((tag, index, array) => (
+									<span key={index}>
+										{tag}
+										{index < array.length - 1 && ", "}
+									</span>
 								))}
-							</TagList>
-						)}
+						</Subhead>
 						<Text>{data.description}</Text>
 					</ContentSection>
 				)}
