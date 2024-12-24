@@ -28,6 +28,7 @@ export const ContentSection = styled(Box, {
 	enableHover?: boolean;
 }>(({ hasPadding, hasPaddingBottom, hasMargin, hasBorder, enableHover, theme }) => ({
 	padding: hasPadding ? "1rem" : "0",
+	marginLeft: hasPadding ? "-0.9rem" : 0,
   	paddingBottom: hasPaddingBottom ? "2rem" : "0",
   	borderBottom: hasBorder ? "1px solid #35353b62" : "none",
   	marginBottom: hasMargin ? "1rem" : "0",
@@ -39,7 +40,6 @@ export const ContentSection = styled(Box, {
 	  },
   	}),
 }));
-  
 
 export const AnimatedContainer = styled(Box)(() => ({
 	animation: `${fadeInAnimation} 0.8s ease`,
