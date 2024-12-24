@@ -19,7 +19,7 @@ export const PageSection = styled(Box)(() => ({
 }))
 
 export const ContentSection = styled(Box, {
-	shouldForwardProp: (prop) => !["hasPadding", "hasMargin", "hasBorder", "hasHover"].includes(prop as string),
+	shouldForwardProp: (prop) => !["hasPadding", "hasPaddingBottom", "hasMargin", "hasBorder", "enableHover"].includes(prop as string),
 })<{
 	hasPadding?: boolean;
 	hasPaddingBottom?: boolean;
