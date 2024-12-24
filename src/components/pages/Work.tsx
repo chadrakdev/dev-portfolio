@@ -3,12 +3,16 @@ import { Heading, Subhead, Text } from "../styled/StyledText"
 import { PageSection, ContentSection } from "../styled/StyledContainers"
 import { AnimatedContainer } from "../styled/StyledContainers"
 
-const Work = () => {
+interface WorkProps {
+	displayCount: number
+}
+
+const Work: React.FC<WorkProps> = ({ displayCount }) => {
 	return (
 		<AnimatedContainer>
 			<PageSection key="work">
 				<Heading hasPadding>Work</Heading>
-				{work.map(data => 
+				{work.slice(0, displayCount).map(data => 
 					<ContentSection hasPaddingBottom key={data.id}>
 						<Heading>{data.company}</Heading>
 						<Subhead>{data.position}</Subhead>
