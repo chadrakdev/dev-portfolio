@@ -31,10 +31,10 @@ export const ContentSection = styled(Box, {
   	paddingBottom: hasPaddingBottom ? "2rem" : "0",
   	borderBottom: hasBorder ? "1px solid #35353b62" : "none",
   	marginBottom: hasMargin ? "1rem" : "0",
+	borderRadius: "1rem 1rem 0 0",
 	transition: "background-color 0.3s",
   	...(enableHover && {
 		"&:hover": {
-			borderRadius: "1rem 1rem 0 0",
 			backgroundColor: theme.palette.mode === "dark" ? "#1d1d21" : "#d8d8db"
 	  },
   	}),
