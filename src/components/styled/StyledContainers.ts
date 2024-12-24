@@ -15,7 +15,7 @@ export const PageContainer = styled(Container)(() => ({
 }))
 
 export const PageSection = styled(Box)(() => ({
-	paddingBottom: '3rem'
+	paddingBottom: '2rem'
 }))
 
 export const ContentSection = styled(Box, {
