@@ -42,7 +42,7 @@ export const darkTheme = createTheme({
 
 export const lightTheme = createTheme({
 	palette: {
-		mode: 'dark',
+		mode: 'light',
 		background: {
 			default: '#f4f4f5',
 		},

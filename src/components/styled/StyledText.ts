@@ -15,5 +15,6 @@ export const Subhead = styled(Typography)(({ theme }) => ({
 
 export const Text = styled(Typography)(() => ({
 	fontWeight: 'normal',
-	paddingBottom: '1rem'
+	paddingBottom: '1rem',
+	fontSize: "14px"
 }))

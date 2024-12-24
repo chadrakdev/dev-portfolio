@@ -18,9 +18,28 @@ export const PageSection = styled(Box)(() => ({
 	paddingBottom: '3rem'
 }))
 
-export const ContentSection = styled(Box)(() => ({
-	paddingBottom: '2rem'
-}))
+export const ContentSection = styled(Box, {
+	shouldForwardProp: (prop) => !["hasPadding", "hasPaddingBottom", "hasMargin", "hasBorder", "enableHover"].includes(prop as string),
+})<{
+	hasPadding?: boolean;
+	hasPaddingBottom?: boolean;
+	hasMargin?: boolean;
+	hasBorder?: boolean;
+	enableHover?: boolean;
+}>(({ hasPadding, hasPaddingBottom, hasMargin, hasBorder, enableHover, theme }) => ({
+	padding: hasPadding ? "1rem" : "0",
+  	paddingBottom: hasPaddingBottom ? "2rem" : "0",
+  	borderBottom: hasBorder ? "1px solid #35353b62" : "none",
+  	marginBottom: hasMargin ? "1rem" : "0",
+	transition: "background-color 0.3s",
+  	...(enableHover && {
+		"&:hover": {
+			borderRadius: "1rem 1rem 0 0",
+			backgroundColor: theme.palette.mode === "dark" ? "#1d1d21" : "#d8d8db"
+	  },
+  	}),
+}));
+  
 
 export const AnimatedContainer = styled(Box)(() => ({
 	animation: `${fadeInAnimation} 0.8s ease`,

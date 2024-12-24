@@ -21,7 +21,7 @@ const Home = () => {
 					{work
 						.filter(data => data.isCurrent)
 						.map(data =>
-							<ContentSection key={data.id}>
+							<ContentSection hasPaddingBottom key={data.id}>
 								<Heading>{data.company}</Heading>
 								<Subhead>{data.position}</Subhead>
 								<Subhead sx={{ paddingBottom: '0.5rem' }}>{data.start} - {data.isCurrent ? "Current" : data.end}</Subhead>
@@ -33,7 +33,7 @@ const Home = () => {
 				<PageSection key="projects">
 					<Heading hasPadding>Projects</Heading>
 					{projects[0] && (
-						<ContentSection>
+						<ContentSection hasPaddingBottom>
 							<Heading>{projects[0].title}</Heading>
 							<Subhead>
   								Technologies: {" "}
