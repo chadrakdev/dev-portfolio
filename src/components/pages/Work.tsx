@@ -9,7 +9,7 @@ const Work = () => {
 			<PageSection key="work">
 				<Heading hasPadding>Work</Heading>
 				{work.map(data => 
-					<ContentSection key={data.id}>
+					<ContentSection hasPaddingBottom key={data.id}>
 						<Heading>{data.company}</Heading>
 						<Subhead>{data.position}</Subhead>
 						<Subhead sx={{ paddingBottom: '0.5rem' }}>{data.start} - {data.isCurrent ? "Current" : data.end}</Subhead>
