@@ -25,7 +25,6 @@ const Projects: React.FC<ProjectsProps> = ({ displayCount = projects.length }) =
 					  url={data.url}
 				  />
 			  ))}
-		
 				</ContentList>
 		  </PageSection>
 		</AnimatedContainer>
