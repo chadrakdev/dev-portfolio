@@ -18,7 +18,7 @@ const ContentListItem: React.FC<ContentListItemProps> = ({ title, description, u
 		>
 			<LinkWrapper
 				target="_blank"
-				rel="noopener"
+				rel="noopener noreferrer"
 				to={url}>
 				<Heading>{title}</Heading>
 				<Text>{description}</Text>
