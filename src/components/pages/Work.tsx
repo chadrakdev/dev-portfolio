@@ -4,7 +4,7 @@ import { PageSection, ContentSection } from "../styled/StyledContainers"
 import { AnimatedContainer } from "../styled/StyledContainers"
 
 interface WorkProps {
-	displayCount: number
+	displayCount?: number
 }
 
 const Work: React.FC<WorkProps> = ({ displayCount }) => {
