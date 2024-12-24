@@ -32,7 +32,7 @@ const NavBar: React.FC<NavBarProps> = ({ onToggleTheme, isDarkMode }) => {
 				<LinkText to="projects">projects</LinkText>
 				<LinkText to="blog">blog</LinkText>
 				<IconButton onClick={onToggleTheme}>
-					{isDarkMode ? <LightMode /> : <DarkMode />}
+					{isDarkMode ? <DarkMode /> : <LightMode />}
 				</IconButton>
 			</div>
 		</StyledNav>
