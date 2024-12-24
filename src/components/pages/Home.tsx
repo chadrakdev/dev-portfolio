@@ -1,8 +1,8 @@
-import { work } from "../../data/work.data"
-import { projects } from "../../data/projects.data"
-import { PageSection, ContentSection } from "../styled/StyledContainers"
-import { Heading, Subhead, Text } from "../styled/StyledText"
+import { PageSection } from "../styled/StyledContainers"
+import { Heading, Text } from "../styled/StyledText"
 import { AnimatedContainer } from "../styled/StyledContainers"
+import Work from "./Work"
+import Projects from "./Projects"
 
 const Home = () => {
 	return (
@@ -16,40 +16,8 @@ const Home = () => {
 					<Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis error quae ab aperiam corrupti porro, explicabo aut atque quas sunt.</Text>
 				</PageSection>
 
-				<PageSection key="work">
-					<Heading hasPadding>Work</Heading>
-					{work
-						.filter(data => data.isCurrent)
-						.map(data =>
-							<ContentSection hasPaddingBottom key={data.id}>
-								<Heading>{data.company}</Heading>
-								<Subhead>{data.position}</Subhead>
-								<Subhead sx={{ paddingBottom: '0.5rem' }}>{data.start} - {data.isCurrent ? "Current" : data.end}</Subhead>
-								<Text>{data.description}</Text>
-							</ContentSection>
-						)}
-				</PageSection>
-
-				<PageSection key="projects">
-					<Heading hasPadding>Projects</Heading>
-					{projects[0] && (
-						<ContentSection hasPaddingBottom>
-							<Heading>{projects[0].title}</Heading>
-							<Subhead>
-  								Technologies: {" "}
-								{projects[0].tags
-									.map((tag, index, array) => (
-										<span key={index}>
-											{tag}
-											{index < array.length - 1 && ", "}
-										</span>
-									))}
-							</Subhead>
-
-							<Text>{projects[0].description}</Text>
-						</ContentSection>
-					)}
-				</PageSection>
+				<Work displayCount={1} />
+				<Projects displayCount={2} />
 			</main>
 		</AnimatedContainer>
 	)
