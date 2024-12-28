@@ -30,6 +30,7 @@ export const darkTheme = createTheme({
 				a: {
 					textDecoration: 'none',
 					color: 'inherit',
+					transition: 'background-color 0.3s ease-in, border-radius 0.3s ease-in',
 					'&:hover': {
 						backgroundColor: '#ffffff26',
 						borderRadius: '0.2rem'
@@ -61,6 +62,7 @@ export const lightTheme = createTheme({
 				a: {
 					textDecoration: 'none',
 					color: 'inherit',
+					transition: 'background-color 0.3s ease-in, border-radius 0.3s ease-in',
 					'&:hover': {
 						backgroundColor: '#00000026',
 						borderRadius: '0.2rem'
