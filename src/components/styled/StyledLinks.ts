@@ -11,11 +11,22 @@ export const LinkIcon = styled(Link, {
 	}
 }));
 
-export const LinkText = styled(Link, {
+export const LinkNavText = styled(Link, {
 	shouldForwardProp: (prop) => prop !== "hasPadding",
 })<{ hasPadding?: boolean }>(({ hasPadding, theme }) => ({
 	padding: hasPadding ? "0.5rem" : "0",
 	color: theme.palette.text.primary
+}));
+
+export const LinkText = styled(Link, {
+	shouldForwardProp: (prop) => prop !== "hasPadding",
+})<{ hasPadding?: boolean }>(({ hasPadding, theme }) => ({
+	padding: hasPadding ? "0.5rem" : "0",
+	color: theme.palette.text.primary,
+	'&:hover': {
+		background: 'none',
+		color: theme.palette.mode === "dark" ? "#ffffff" : "#000000"
+	}
 }));
 
 export const LinkWrapper = styled(Link)(() => ({
