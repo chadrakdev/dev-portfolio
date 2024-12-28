@@ -1,0 +1,30 @@
+import { AnimatedContainer, ContentSection } from "../styled/StyledContainers"
+import { PageSection } from "../styled/StyledContainers"
+import { Heading, Text } from "../styled/StyledText"
+import { LinkText, LinkIcon } from "../styled/StyledLinks"
+import { GitHub, LinkedIn, Twitter } from "../styled/StyledIcons"
+
+const Contact = () => {
+	return (
+		<AnimatedContainer>
+			<PageSection key="contact">
+				<Heading hasPadding>Let&apos;s Connect</Heading>
+				<Text>Whether you have a question, a project idea, or just want to say hello, you can reach out via social media or drop me an email.</Text>
+				<ContentSection>
+					<LinkIcon hasPadding to="https://github.com/chadrakdev">
+						<GitHub />
+					</LinkIcon>
+					<LinkIcon hasPadding to="https://www.linkedin.com/in/chadrakholondo/">
+						<LinkedIn />
+					</LinkIcon>
+					<LinkIcon hasPadding to="https://x.com/chadrakdev">
+						<Twitter />
+					</LinkIcon>
+				</ContentSection>
+				<LinkText to="mailto:chadrakdev@outlok.com">chadrakdev@outlook.com</LinkText>
+			</PageSection>
+		</AnimatedContainer>
+	)
+}
+
+export default Contact

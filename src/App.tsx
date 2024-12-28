@@ -9,7 +9,7 @@ import NavBar from './components/navigation/NavBar'
 import Home from './components/pages/Home'
 import Work from './components/pages/Work'
 import Projects from './components/pages/Projects'
-import Blog from './components/pages/Blog'
+import Contact from './components/pages/Contact'
 import Footer from './components/footer/Footer'
 
 const App = () => {
@@ -32,8 +32,8 @@ const App = () => {
 		case ("/projects"): {
 			return "Projects"
 		}
-		case ("/blog"): {
-			return "Blog"
+		case ("/contact"): {
+			return "Contact"
 		}
 		default: {
 			return ""
@@ -63,7 +63,7 @@ const App = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/work" element={<Work />} />
 						<Route path="/projects" element={<Projects />} />
-						<Route path="/blog" element={<Blog />} />
+						<Route path="/contact" element={<Contact />} />
 					</Routes>
 				</PageLayout>
 				<Footer />

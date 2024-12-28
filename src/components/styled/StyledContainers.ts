@@ -1,4 +1,4 @@
-import { styled, Box, Container, List, ListItem } from "@mui/material";
+import { styled, AppBar, Box, Container, List, ListItem } from "@mui/material";
 import { fadeInAnimation } from "../styled/Animations";
 
 export const AppContainer = styled(Container)(({ theme }) => ({
@@ -7,6 +7,20 @@ export const AppContainer = styled(Container)(({ theme }) => ({
 	[theme.breakpoints.down("sm")]: {
 		maxWidth: "90%"
 	},
+}))
+
+export const NavContainer = styled(AppBar)(({ theme }) => ({
+	display: 'flex',
+	flexDirection: 'row',
+	justifyContent: 'space-between',
+	verticalAlign: 'bottom',
+	padding: '0.7rem 0',
+	backgroundColor: theme.palette.navBackground,
+	backgroundImage: 'none',
+	backdropFilter: 'blur(0.1rem)',
+	boxShadow: 'none',
+	top: '0',
+	position: 'sticky'
 }))
 
 export const PageContainer = styled(Container)(() => ({
