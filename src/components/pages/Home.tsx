@@ -3,6 +3,7 @@ import { Heading, Text } from "../styled/StyledText"
 import { AnimatedContainer } from "../styled/StyledContainers"
 import Work from "./Work"
 import Projects from "./Projects"
+import Contact from "./Contact"
 
 const Home = () => {
 	return (
@@ -18,6 +19,7 @@ const Home = () => {
 
 				<Work displayCount={1} />
 				<Projects displayCount={2} />
+				<Contact />
 			</main>
 		</AnimatedContainer>
 	)
