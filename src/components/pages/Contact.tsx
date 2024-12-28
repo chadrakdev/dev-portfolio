@@ -14,7 +14,7 @@ const Contact = () => {
 					<LinkIcon hasPadding to="https://github.com/chadrakdev">
 						<GitHub />
 					</LinkIcon>
-					<LinkIcon hasPadding to="https://www.linkedin.com/in/chadrakholondo/">
+					<LinkIcon hasPadding to="https://linkedin.com/in/chadrakholondo/">
 						<LinkedIn />
 					</LinkIcon>
 					<LinkIcon hasPadding to="https://x.com/chadrakdev">
