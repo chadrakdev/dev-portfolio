@@ -19,9 +19,10 @@ export const LinkNavText = styled(Link, {
 }));
 
 export const LinkText = styled(Link, {
-	shouldForwardProp: (prop) => prop !== "hasPadding",
-})<{ hasPadding?: boolean }>(({ hasPadding, theme }) => ({
+	shouldForwardProp: (prop) => !["hasPadding", "isBold"].includes(prop as string),
+})<{ hasPadding?: boolean, isBold?: boolean }>(({ hasPadding, isBold, theme }) => ({
 	padding: hasPadding ? "0.5rem" : "0",
+	fontWeight: isBold ? "bold" : "normal",
 	color: theme.palette.text.primary,
 	'&:hover': {
 		background: 'none',
