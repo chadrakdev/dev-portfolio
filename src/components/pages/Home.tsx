@@ -4,6 +4,7 @@ import { AnimatedContainer } from "../styled/StyledContainers"
 import Work from "./Work"
 import Projects from "./Projects"
 import Contact from "./Contact"
+import { LinkText } from "../styled/StyledLinks"
 
 const Home = () => {
 	return (
@@ -12,9 +13,8 @@ const Home = () => {
 				<PageSection key="bio">
 					<Heading>Chadrak H</Heading>
 					<Heading hasPadding>Software Engineer</Heading>
-					<Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, voluptate!</Text>
-					<Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aliquid. Reprehenderit quae obcaecati accusantium quod dolor temporibus, eligendi fugiat ullam, illo nemo consequatur soluta laborum sed ipsa ea ab porro?</Text>
-					<Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis error quae ab aperiam corrupti porro, explicabo aut atque quas sunt.</Text>
+					<Text>I am a passionate developer, primarily working in C# and React (commercially), in a full-stack environment in both fin-tech and real estate industries but I also enjoy working with Swift and dabbling in freelance iOS development.</Text>
+					<Text>My latest work can be seen highlighted under <LinkText isBold to="/projects">Projects</LinkText> and anything else can be found on my GitHub.</Text>
 				</PageSection>
 
 				<Work displayCount={1} />
