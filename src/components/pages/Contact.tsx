@@ -21,7 +21,7 @@ const Contact = () => {
 						<Twitter />
 					</LinkIcon>
 				</ContentSection>
-				<LinkText to="mailto:chadrakdev@outlok.com">chadrakdev@outlook.com</LinkText>
+				<LinkText to="mailto:chadrakdev@outlook.com">chadrakdev@outlook.com</LinkText>
 			</PageSection>
 		</AnimatedContainer>
 	)
