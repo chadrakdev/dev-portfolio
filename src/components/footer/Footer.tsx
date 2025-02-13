@@ -9,7 +9,7 @@ const Footer = () => {
 	return (
 		<StyledFooter disableGutters>
 			<Text>
-                © 2024 | Chadrak Holondo
+                © 2025 | Chadrak Holondo
 			</Text>
 		</StyledFooter>
 	)
