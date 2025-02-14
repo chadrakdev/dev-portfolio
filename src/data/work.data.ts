@@ -7,14 +7,14 @@ export const work: WorkHistory[] = [
 		position: "3rd Line Software Support",
 		start: "Nov 2023",
 		isCurrent: true,
-		description: "Collaborated with development teams to improve processes and tooling for service desk agents, supported applications to enhance stability and performance, and resolved complex software issues to meet SLA targets.",
+		description: "Resolving complex software issues under strict SLA deadlines while developing internal applications and support tools to improve team workflows and collaborating with development teams to enhance system stability, performance, and service desk efficiency.",
 		responsibilities: [
-			"Developed support applications to enhance tools, processes, and systems for service desk agents in collaboration with development teams.",
-			"Maintained databases and wrote efficient queries to provide reporting and analysis for large-scale systems.",
-			"Provided expert-level technical support by investigating and resolving complex software issues escalated from Tier 1 and Tier 2 support agents.",
-			"Collaborated closely with development teams to streamline releases and improve product quality, stability, and user performance.",
-			"Assessed the severity and urgency of issues, escalating to development teams when necessary for timely resolutions.",
-			"Managed and prioritized multiple support incidents simultaneously, adhering to SLA requirements and providing regular updates to stakeholders."
+			"Developing support applications and tooling to improve workflows, processes, and systems for service desk agents in collaboration with development teams.",
+			"Working with large-scale databases, writing efficient queries to provide reporting and; performing analysis for a range of systems.",
+			"Providing technical support and investigating complex software issues escalated from Tier 1 and Tier 2 agents.",
+			"Collaborating with development teams to streamline releases and improve product quality, stability, and user performance.",
+			"Identifying critical issues and assessing the severity and urgency to effectively escalate to development teams when necessary for timely resolutions.",
+			"Managing and prioritising multiple support incidents simultaneously, adhering to SLA requirements and providing regular updates to stakeholders."
 		  ]
 	},
 	{
