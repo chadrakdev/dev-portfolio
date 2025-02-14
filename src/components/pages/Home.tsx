@@ -13,7 +13,7 @@ const Home = () => {
 				<PageSection key="bio">
 					<Heading>Chadrak H</Heading>
 					<Heading hasPadding>Software Engineer</Heading>
-					<Text>I am a passionate developer, primarily working in C# and React (commercially), in a full-stack environment in both fin-tech and real estate industries but I also enjoy working with Swift and dabbling in freelance iOS development.</Text>
+					<Text>I’m a full-stack developer working with C# and React commercially and, outside of that, I dive into iOS development with Swift, always looking for new learning opportunities and things to build.</Text>
 					<Text>My latest work can be seen highlighted under <LinkText isBold to="/projects">Projects</LinkText> and anything else can be found on my GitHub.</Text>
 				</PageSection>
 
