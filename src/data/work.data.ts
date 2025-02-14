@@ -10,11 +10,9 @@ export const work: WorkHistory[] = [
 		description: "Resolving complex software issues under strict SLA deadlines while developing internal applications and support tools to improve team workflows and collaborating with development teams to enhance system stability, performance, and service desk efficiency.",
 		responsibilities: [
 			"Developing support applications and tooling to improve workflows, processes, and systems for service desk agents in collaboration with development teams.",
-			"Working with large-scale databases, writing efficient queries to provide reporting and; performing analysis for a range of systems.",
+			"Optimizing and querying large-scale databases to troubleshoot issues, enhance performance, and generate insightful reports for data analysis.",
 			"Providing technical support and investigating complex software issues escalated from Tier 1 and Tier 2 agents.",
-			"Collaborating with development teams to streamline releases and improve product quality, stability, and user performance.",
-			"Identifying critical issues and assessing the severity and urgency to effectively escalate to development teams when necessary for timely resolutions.",
-			"Managing and prioritising multiple support incidents simultaneously, adhering to SLA requirements and providing regular updates to stakeholders."
+			"Identifying critical issues and assessing the severity and urgency to effectively escalate to development teams when necessary for timely resolutions."
 		  ]
 	},
 	{
