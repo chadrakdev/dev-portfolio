@@ -2,7 +2,7 @@ import { AnimatedContainer, ContentSection } from "../styled/StyledContainers"
 import { PageSection } from "../styled/StyledContainers"
 import { Heading, Text } from "../styled/StyledText"
 import { LinkText, LinkIcon } from "../styled/StyledLinks"
-import { GitHub, LinkedIn, Twitter } from "../styled/StyledIcons"
+import { GitHub, LinkedIn } from "../styled/StyledIcons"
 
 const Contact = () => {
 	return (
