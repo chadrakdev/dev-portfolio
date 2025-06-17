@@ -17,9 +17,6 @@ const Contact = () => {
 					<LinkIcon hasPadding to="https://linkedin.com/in/chadrakholondo/">
 						<LinkedIn />
 					</LinkIcon>
-					<LinkIcon hasPadding to="https://x.com/chadrakdev">
-						<Twitter />
-					</LinkIcon>
 				</ContentSection>
 				<LinkText to="mailto:chadrakdev@outlook.com">chadrakdev@outlook.com</LinkText>
 			</PageSection>
