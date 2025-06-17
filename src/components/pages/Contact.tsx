@@ -2,7 +2,7 @@ import { AnimatedContainer, ContentSection } from "../styled/StyledContainers"
 import { PageSection } from "../styled/StyledContainers"
 import { Heading, Text } from "../styled/StyledText"
 import { LinkText, LinkIcon } from "../styled/StyledLinks"
-import { GitHub, LinkedIn, Twitter } from "../styled/StyledIcons"
+import { GitHub, LinkedIn } from "../styled/StyledIcons"
 
 const Contact = () => {
 	return (
@@ -16,9 +16,6 @@ const Contact = () => {
 					</LinkIcon>
 					<LinkIcon hasPadding to="https://linkedin.com/in/chadrakholondo/">
 						<LinkedIn />
-					</LinkIcon>
-					<LinkIcon hasPadding to="https://x.com/chadrakdev">
-						<Twitter />
 					</LinkIcon>
 				</ContentSection>
 				<LinkText to="mailto:chadrakdev@outlook.com">chadrakdev@outlook.com</LinkText>
