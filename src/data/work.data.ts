@@ -4,7 +4,7 @@ export const work: WorkHistory[] = [
 	{
 		"id": 1,
 		"company": "Nurtur Tech",
-		"position": "3rd Line Support Engineer",
+		"position": "3rd Line Software Support Engineer",
 		"start": "Nov 2023",
 		"isCurrent": true,
 		"description": "Resolving complex software issues within defined SLOs while developing internal tools, managing integrations, and collaborating with development teams to improve workflows, performance, and system reliability.",
