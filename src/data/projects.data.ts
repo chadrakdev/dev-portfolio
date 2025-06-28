@@ -3,10 +3,10 @@ import { ProjectHistory } from "../types/projectHistory";
 export const projects: ProjectHistory[] = [
 	{
 		id: 1,
-		title: "Password Generator API",
-		url: "https://github.com/chadrakdev/PasswordGeneratorAPI",
-		tags: ["C#", ".NET", "MVC"],
-		description: "API for generating customisable, secure passwords focusing on security, encryption, and the algorithmic side of API development."
+		title: "HoopInsights API",
+		url: "https://github.com/chadrakdev/HoopInsightsAPI",
+		tags: ["C#", ".NET"],
+		description: "API integrating with an external API to provide data on teams, players and advanced statistics."
 	},
 	{
 		id: 2,
@@ -17,10 +17,10 @@ export const projects: ProjectHistory[] = [
 	},
 	{
 		id: 3,
-		title: "Game Library API",
-		url: "https://github.com/chadrakdev/GameLibraryAPI",
+		title: "Password Generator API",
+		url: "https://github.com/chadrakdev/PasswordGeneratorAPI",
 		tags: ["C#", ".NET", "MVC"],
-		description: "RESTful API for managing game collections with full CRUD operations showcasing the ability to manage data models, implement CRUD operations, and potential for database integration."
+		description: "API generating customisable, secure passwords focusing on security, encryption, and the algorithmic side of API development."
 	},
 	{
 		id: 4,
