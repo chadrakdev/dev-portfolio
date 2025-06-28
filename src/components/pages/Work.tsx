@@ -19,13 +19,15 @@ const Work: React.FC<WorkProps> = ({ displayCount }) => {
 						<Subhead>{data.position}</Subhead>
 						<Subhead sx={{ paddingBottom: '0.5rem' }}>{data.start} - {data.isCurrent ? "Present" : data.end}</Subhead>
 						<Text>{data.description}</Text>
-						<List>
-							{data.responsibilities.map(responsibility =>
-								<ListItem disableGutters key={responsibility}>
-								&bull; {responsibility}
-								</ListItem>
-							)}
-						</List>
+						{displayCount == null && (
+							<List>
+								{data.responsibilities.map(responsibility => (
+									<ListItem disableGutters key={responsibility}>
+                    					• {responsibility}
+									</ListItem>
+								))}
+							</List>
+						)}
 					</ContentSection>
 				)}
 			</PageSection>
