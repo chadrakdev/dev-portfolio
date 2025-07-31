@@ -18,7 +18,6 @@ const Home = () => {
 					</Text>
 					<Text>
 						You can check out some of my latest projects <LinkText isBold to="/projects">here</LinkText>, and more on my <LinkText isBold to="https://github.com/chadrakdev">GitHub</LinkText>.
-						<br /><br />NSV Security Check Cleared.
 					</Text>
 				</PageSection>
 				<Work displayCount={1} />
