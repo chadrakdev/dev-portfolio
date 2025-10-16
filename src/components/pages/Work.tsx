@@ -9,11 +9,14 @@ interface WorkProps {
 }
 
 const Work: React.FC<WorkProps> = ({ displayCount }) => {
+	const workEntries = [...work].reverse()
+	const visibleWork = displayCount == null ? workEntries : workEntries.slice(0, displayCount)
+
 	return (
 		<AnimatedContainer>
 			<PageSection key="work">
 				<Heading hasPadding>Work</Heading>
-				{work.slice(0, displayCount).map(data => 
+				{visibleWork.map(data => 
 					<ContentSection hasPaddingBottom key={data.id}>
 						<Heading>{data.position}</Heading>
 						<Subhead>{data.company}</Subhead>
