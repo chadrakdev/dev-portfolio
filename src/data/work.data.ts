@@ -8,8 +8,7 @@ export const work: WorkHistory[] = [
 		start: 'Sep 2021',
 		end: 'Jul 2022',
 		isCurrent: false,
-		description:
-      'Developed bespoke, responsive HTML email templates and custom components while ensuring cross-client compatibility and maintaining internal legacy systems built with ASP.NET.',
+		description: 'Developed bespoke, responsive HTML email templates and custom components while ensuring cross-client compatibility and maintaining internal legacy systems built with ASP.NET.',
 		responsibilities: [
 			'Built and styled responsive HTML email templates using semantic HTML and CSS, tailored to marketing and campaign needs.',
 			'Developed reusable email components and debugged rendering issues across major email clients including Outlook, Gmail, and 	Apple Mail.',
@@ -25,8 +24,7 @@ export const work: WorkHistory[] = [
 		start: 'Jul 2022',
 		end: 'Sep 2022',
 		isCurrent: false,
-		description:
-      'Maintained legacy applications and contributed to real-time trading systems at a leading financial services firm by developing features across a microservices architecture and frontend React interface, working with Java and Spring Boot.',
+		description: 'Maintained legacy applications and contributed to real-time trading systems at a leading financial services firm by developing features across a microservices architecture and frontend React interface, working with Java and Spring Boot.',
 		responsibilities: [
 			'Developed and maintained backend services in a distributed architecture, enhancing support for real-time trade data and 	operational workflows.',
 			'Extended legacy codebases with clean, testable code to meet stakeholder requirements under tight deadlines.',
@@ -42,8 +40,7 @@ export const work: WorkHistory[] = [
 		start: 'Oct 2022',
 		end: 'Oct 2023',
 		isCurrent: false,
-		description:
-      'Completed an intensive software engineering program developing full-stack solutions, and applying modern engineering practices to real-world projects in partnership with BAE Digital Intelligence.',
+		description: 'Completed an intensive software engineering program developing full-stack solutions, and applying modern engineering practices to real-world projects in partnership with BAE Digital Intelligence.',
 		responsibilities: [
 			'Built strong foundations in C#, .NET, TypeScript, and DevOps practices through structured learning and assigned projects.',
 			'Designed and developed RESTful APIs with secure authentication using OAuth and JWT, following SOLID and clean architecture 	principles.',
@@ -59,8 +56,7 @@ export const work: WorkHistory[] = [
 		start: 'Nov 2023',
 		end: 'Sep 2025',
 		isCurrent: false,
-		description:
-      'Resolved complex software issues within defined SLOs while developing internal tools, managing integrations, and collaborating with development teams to improve workflows, performance, and system reliability.',
+		description: 'Resolved complex software issues within defined SLOs while developing internal tools, managing integrations, and collaborating with development teams to improve workflows, performance, and system reliability.',
 		responsibilities: [
 			'Developed internal tooling and support applications to streamline workflows and improve efficiency for service desk agents.',
 			'Investigated and resolved complex issues escalated by Tier 1 and Tier 2 agents within SLO targets.',
@@ -75,8 +71,7 @@ export const work: WorkHistory[] = [
 		position: 'Associate Software Engineer',
 		start: 'Oct 2025',
 		isCurrent: true,
-		description:
-      'Developing and maintaining full stack applications and cloud-hosted systems through feature delivery, operational improvements, and structured deployment processes. Working across software engineering, CI/CD, production support, and system reliability.',
+		description: 'Developing and maintaining full stack applications and cloud-hosted systems through feature delivery, operational improvements, and structured deployment processes. Working across software engineering, CI/CD, production support, and system reliability.',
 		responsibilities: [
 			'Develop and deploy code changes for feature enhancements, bug fixes, and production incident resolutions across client systems.',
 			'Build and maintain CI/CD pipelines, deployment automation, and release processes to support safe and reliable software delivery.',
