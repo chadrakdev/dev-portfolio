@@ -22,6 +22,13 @@ const Work: React.FC<WorkProps> = ({ displayCount }) => {
 						<Subhead sx={{ paddingBottom: "0.5rem" }}>{data.start} - {data.isCurrent ? "Present" : data.end}</Subhead>
 						<Text>{data.description}</Text>
 						{displayCount == null && (
+							<TagList disablePadding>
+								{data.technologies.map(tech => (
+									<TagListItem key={tech}>{tech}</TagListItem>
+								))}
+							</TagList>
+						)}
+						{displayCount == null && (
 							<List>
 								{data.responsibilities.map(responsibility => (
 									<ListItem disableGutters key={responsibility}>

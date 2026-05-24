@@ -60,7 +60,7 @@ export const work: WorkHistory[] = [
 		end: "Sep 2025",
 		isCurrent: false,
 		description: "Resolved complex software issues within defined SLOs while developing internal tools, managing integrations, and collaborating with development teams to improve workflows, performance, and system reliability.",
-		technologies: ["C#", "ASP.NET", ".NET Framework", "JavaScript", "React", "SQL Server Management Studio", "PowerShell"],
+		technologies: ["C#", "ASP.NET", ".NET Framework", "JavaScript", "React", "PowerShell"],
 		responsibilities: [
 			"Developed internal tooling and support applications to streamline workflows and improve efficiency for service desk agents.",
 			"Investigated and resolved complex issues escalated by Tier 1 and Tier 2 agents within SLO targets.",
