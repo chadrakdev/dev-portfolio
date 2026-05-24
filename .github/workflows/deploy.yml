@@ -67,18 +67,24 @@ jobs:
       - name: Check site health
         shell: bash
         run: |
-          # Wait for deployment
           sleep 30
 
-          URL="https://chadrak.dev/"
+          URLS=(
+            "https://chadrakdev.netlify.app/"
+            "https://chadrak.dev/"
+          )
 
-          HTTP_CODE=$(curl -s --fail -o /dev/null -w "%{http_code}" "$URL")
+          for URL in "${URLS[@]}"; do
+            echo "Checking $URL"
 
-          echo "HTTP response code: $HTTP_CODE"
+            HTTP_CODE=$(curl -s --fail -o /dev/null -w "%{http_code}" "$URL")
 
-          if [ "$HTTP_CODE" -eq 200 ]; then
-            echo "✅ Smoke test passed. Status: HTTP $HTTP_CODE"
-          else
-            echo "❌ Smoke test failed. Status: HTTP $HTTP_CODE"
-            exit 1
-          fi
+            echo "HTTP response code for $URL: $HTTP_CODE"
+
+            if [ "$HTTP_CODE" -ne 200 ]; then
+              echo "❌ Smoke test failed for $URL (HTTP $HTTP_CODE)"
+              exit 1
+            fi
+          done
+
+          echo "✅ All smoke tests passed"
