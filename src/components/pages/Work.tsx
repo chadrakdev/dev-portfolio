@@ -1,7 +1,6 @@
 import { work } from "../../data/work.data"
 import { Heading, Subhead, Text } from "../styled/StyledText"
-import { PageSection, ContentSection } from "../styled/StyledContainers"
-import { AnimatedContainer } from "../styled/StyledContainers"
+import { PageSection, ContentSection, AnimatedContainer, TagList, TagListItem } from "../styled/StyledContainers"
 import { List, ListItem } from "@mui/material"
 
 interface WorkProps {
