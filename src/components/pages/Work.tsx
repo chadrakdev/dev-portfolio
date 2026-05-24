@@ -1,7 +1,6 @@
 import { work } from "../../data/work.data"
 import { Heading, Subhead, Text } from "../styled/StyledText"
-import { PageSection, ContentSection } from "../styled/StyledContainers"
-import { AnimatedContainer } from "../styled/StyledContainers"
+import { PageSection, ContentSection, AnimatedContainer, TagList, TagListItem } from "../styled/StyledContainers"
 import { List, ListItem } from "@mui/material"
 
 interface WorkProps {
@@ -22,6 +21,13 @@ const Work: React.FC<WorkProps> = ({ displayCount }) => {
 						<Subhead>{data.company}</Subhead>
 						<Subhead sx={{ paddingBottom: "0.5rem" }}>{data.start} - {data.isCurrent ? "Present" : data.end}</Subhead>
 						<Text>{data.description}</Text>
+						{displayCount == null && (
+							<TagList disablePadding>
+								{data.technologies.map(tech => (
+									<TagListItem key={tech}>{tech}</TagListItem>
+								))}
+							</TagList>
+						)}
 						{displayCount == null && (
 							<List>
 								{data.responsibilities.map(responsibility => (

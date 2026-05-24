@@ -64,6 +64,7 @@ export const AnimatedContainer = styled(Box)(() => ({
 export const TagList = styled(List)(() => ({
 	display: "flex",
 	flexDirection: "row",
+	flexWrap: "wrap",
 	justifyContent: "start",
 	padding: "0.5rem 0"
 }))
