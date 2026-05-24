@@ -67,8 +67,6 @@ jobs:
       - name: Check site health
         shell: bash
         run: |
-          sleep 30
-
           URLS=(
             "https://chadrakdev.netlify.app/"
             "https://chadrak.dev/"
