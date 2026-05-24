@@ -24,8 +24,8 @@ export const LinkText = styled(Link, {
 	padding: hasPadding ? "0.5rem" : "0",
 	fontWeight: isBold ? "bold" : "normal",
 	color: theme.palette.text.primary,
-	'&:hover': {
-		background: 'none',
+	"&:hover": {
+		background: "none",
 		color: theme.palette.mode === "dark" ? "#ffffff" : "#000000"
 	}
 }));
@@ -33,5 +33,5 @@ export const LinkText = styled(Link, {
 export const LinkWrapper = styled(Link)(() => ({
 	padding: 0,
 	margin: 0,
-	textDecoration: 'none'
+	textDecoration: "none"
 }));

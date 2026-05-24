@@ -1,8 +1,8 @@
 import { styled } from "@mui/material";
 import { LightModeOutlined, DarkModeOutlined } from "@mui/icons-material";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import XIcon from '@mui/icons-material/X';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import XIcon from "@mui/icons-material/X";
 
 export const LightMode = styled(LightModeOutlined)(({ theme }) => ({
 	color: theme.palette.text.primary,
