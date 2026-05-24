@@ -1,0 +1,90 @@
+name: Build, Test and Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist/
+
+  test:
+    name: Test
+    runs-on: ubuntu-24.04
+    needs: build
+
+    steps:
+      - name: Run unit tests
+        run: echo "Tests will run here"
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-24.04
+    needs: [ build, test ]
+
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist/
+
+      - name: Deploy to Netlify
+        run: npx netlify-cli deploy --prod --dir=dist
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_PROJECT_ID }}
+
+  smoke-test:
+    name: Post-deployment Smoke Test
+    runs-on: ubuntu-24.04
+    needs: deploy
+
+    steps:
+      - name: Check site health
+        shell: bash
+        run: |
+          sleep 30
+
+          URLS=(
+            "https://chadrakdev.netlify.app/"
+            "https://chadrak.dev/"
+          )
+
+          for URL in "${URLS[@]}"; do
+            echo "Checking $URL"
+
+            HTTP_CODE=$(curl -s --fail -o /dev/null -w "%{http_code}" "$URL")
+
+            echo "HTTP response code for $URL: $HTTP_CODE"
+
+            if [ "$HTTP_CODE" -ne 200 ]; then
+              echo "❌ Smoke test failed for $URL (HTTP $HTTP_CODE)"
+              exit 1
+            fi
+          done
+
+          echo "✅ All smoke tests passed"
