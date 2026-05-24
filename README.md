@@ -1,9 +1,23 @@
 # Developer Portfolio
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dc043860-881e-4778-856b-b3247b5759f9/deploy-status)](https://app.netlify.com/sites/chadrakdev/deploys)
+[![Deploy](https://github.com/chadrakdev/dev-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/chadrakdev/dev-portfolio/actions/workflows/deploy.yml)
 
 [View portfolio](https://chadrak.dev)
 
 
-A minimalist portfolio demonstrating ability to design a responsive, modern user interface and work with *React* and *TypeScript* for type safety and create dynamic web components.
+A minimalist developer portfolio built with **React**, **TypeScript**, and **Material UI**, bundled with Vite. This project essentially serves as an online CV, showcasing work history, personal projects, and contact information.
 
- Inspired by Mark Horn's minimalist portfolio built with Astro, [see here](https://markhorn.dev/).
+## Technologies
+
+| Technology | Version |
+|---|---|
+| React | 19 |
+| React Router | 7 |
+| Material UI | 6 |
+| TypeScript | 5.7 |
+| Vite | 6 |
+
+## Deployments
+CI/CD is handled entirely through GitHub Actions — the **PR Checks** workflow runs a build on every pull request to validate changes before merge, and then the **Build, Test and Deploy** workflow builds and ships to **Netlify** automatically on every push to `main`.
+
+## Misc
+Inspired by Mark Horn's portfolio built with Astro, [see here](https://markhorn.dev/).
