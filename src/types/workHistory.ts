@@ -5,6 +5,7 @@ export interface BaseWorkHistory {
 	start: string;
 	isCurrent: boolean;
 	description: string;
+	technologies: string[];
 	responsibilities: string[];
   }
   
