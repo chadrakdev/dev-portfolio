@@ -64,5 +64,21 @@ jobs:
     needs: deploy
 
     steps:
-      - name: Run smoke tests
-        run: echo "Smoke tests will run here"
+      - name: Check site health
+        shell: bash
+        run: |
+          # Wait for deployment
+          sleep 30
+
+          URL="https://chadrak.dev/"
+
+          HTTP_CODE=$(curl -s --fail -o /dev/null -w "%{http_code}" "$URL")
+
+          echo "HTTP response code: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" -eq 200 ]; then
+            echo "✅ Smoke test passed. Status: HTTP $HTTP_CODE"
+          else
+            echo "❌ Smoke test failed. Status: HTTP $HTTP_CODE"
+            exit 1
+          fi
