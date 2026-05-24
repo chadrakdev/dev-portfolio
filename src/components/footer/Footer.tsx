@@ -2,7 +2,7 @@ import { styled, Container } from "@mui/material"
 import { Text } from "../styled/StyledText"
 
 const StyledFooter = styled(Container)(() => ({
-	padding: '0'
+	padding: "0"
 }))
 
 const Footer = () => {

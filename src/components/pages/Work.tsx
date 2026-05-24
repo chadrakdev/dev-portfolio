@@ -20,7 +20,7 @@ const Work: React.FC<WorkProps> = ({ displayCount }) => {
 					<ContentSection hasPaddingBottom key={data.id}>
 						<Heading>{data.position}</Heading>
 						<Subhead>{data.company}</Subhead>
-						<Subhead sx={{ paddingBottom: '0.5rem' }}>{data.start} - {data.isCurrent ? "Present" : data.end}</Subhead>
+						<Subhead sx={{ paddingBottom: "0.5rem" }}>{data.start} - {data.isCurrent ? "Present" : data.end}</Subhead>
 						<Text>{data.description}</Text>
 						{displayCount == null && (
 							<List>

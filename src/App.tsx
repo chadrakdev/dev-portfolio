@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react'
-import { darkTheme, lightTheme } from './theme'
-import { ThemeProvider } from '@mui/material'
-import CssBaseline from '@mui/material/CssBaseline'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import AppLayout from './components/layouts/AppLayout'
-import PageLayout from './components/layouts/PageLayout'
-import NavBar from './components/navigation/NavBar'
-import Home from './components/pages/Home'
-import Work from './components/pages/Work'
-import Projects from './components/pages/Projects'
-import Contact from './components/pages/Contact'
-import Footer from './components/footer/Footer'
+import { useEffect, useState } from "react"
+import { darkTheme, lightTheme } from "./theme"
+import { ThemeProvider } from "@mui/material"
+import CssBaseline from "@mui/material/CssBaseline"
+import { Routes, Route, useLocation } from "react-router-dom"
+import AppLayout from "./components/layouts/AppLayout"
+import PageLayout from "./components/layouts/PageLayout"
+import NavBar from "./components/navigation/NavBar"
+import Home from "./components/pages/Home"
+import Work from "./components/pages/Work"
+import Projects from "./components/pages/Projects"
+import Contact from "./components/pages/Contact"
+import Footer from "./components/footer/Footer"
 
 const App = () => {
 	const [isDarkMode, setIsDarkMode] = useState(true);

@@ -10,26 +10,26 @@ export const AppContainer = styled(Container)(({ theme }) => ({
 }))
 
 export const NavContainer = styled(AppBar)(({ theme }) => ({
-	display: 'flex',
-	flexDirection: 'row',
-	justifyContent: 'space-between',
-	verticalAlign: 'bottom',
-	padding: '0.7rem 0',
+	display: "flex",
+	flexDirection: "row",
+	justifyContent: "space-between",
+	verticalAlign: "bottom",
+	padding: "0.7rem 0",
 	backgroundColor: theme.palette.navBackground,
-	backgroundImage: 'none',
-	backdropFilter: 'blur(0.1rem)',
-	boxShadow: 'none',
-	top: '0',
-	position: 'sticky'
+	backgroundImage: "none",
+	backdropFilter: "blur(0.1rem)",
+	boxShadow: "none",
+	top: "0",
+	position: "sticky"
 }))
 
 export const PageContainer = styled(Container)(() => ({
-	padding: '3rem 0.1rem',
-	margin: '0',
+	padding: "3rem 0.1rem",
+	margin: "0",
 }))
 
 export const PageSection = styled(Box)(() => ({
-	paddingBottom: '2rem'
+	paddingBottom: "2rem"
 }))
 
 export const ContentSection = styled(Box, {
@@ -62,22 +62,22 @@ export const AnimatedContainer = styled(Box)(() => ({
 }))
 
 export const TagList = styled(List)(() => ({
-	display: 'flex',
-	flexDirection: 'row',
-	justifyContent: 'start',
-	padding: '0.5rem 0'
+	display: "flex",
+	flexDirection: "row",
+	justifyContent: "start",
+	padding: "0.5rem 0"
 }))
 
 export const TagListItem = styled(ListItem)(({ theme }) => ({
-	fontWeight: 'normal',
-	fontSize: '0.8rem',
+	fontWeight: "normal",
+	fontSize: "0.8rem",
 	color: theme.palette.text.secondary,
-	border: '0.1rem solid',
-	borderRadius: '0.5rem',
-	margin: '0.3rem 0.3rem 0.3rem 0',
-	padding: '0.3rem',
-	width: 'auto',
-	'&:hover': {
+	border: "0.1rem solid",
+	borderRadius: "0.5rem",
+	margin: "0.3rem 0.3rem 0.3rem 0",
+	padding: "0.3rem",
+	width: "auto",
+	"&:hover": {
 		color: theme.palette.text.primary,
 		backgroundColor: theme.palette.text.secondary
 	}

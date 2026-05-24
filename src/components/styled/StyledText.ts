@@ -9,13 +9,13 @@ export const Heading = styled(Typography, {
 }));
 
 export const Subhead = styled(Typography)(({ theme }) => ({
-	fontWeight: 'normal',
+	fontWeight: "normal",
 	color: theme.palette.text.secondary,
-	fontSize: '14px'
+	fontSize: "14px"
 }))
 
 export const Text = styled(Typography)(() => ({
-	fontWeight: 'normal',
-	paddingBottom: '1rem',
+	fontWeight: "normal",
+	paddingBottom: "1rem",
 	fontSize: "14px"
 }))
