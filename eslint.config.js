@@ -20,7 +20,8 @@ export default [
 			"react/react-in-jsx-scope": "off",
 			"react/jsx-uses-react": "off",
 			"indent": ["error", "tab"],
-			"react/prop-types": "off"
+			"react/prop-types": "off",
+			"quotes": ["error", "double"]
 		}
 	}
 ];
