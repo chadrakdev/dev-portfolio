@@ -1,16 +1,8 @@
-import { ReactNode } from "react"
-import { ContentSection } from "../styled/StyledContainers";
+import { ContentSection } from "../styled/StyledContainers"
+import { WithChildren } from "../../types/common"
 
-interface ContentListProps {
-    children: ReactNode;
-}
-
-const ContentList: React.FC<ContentListProps> = ({ children }) => {
-	return (
-		<ContentSection>
-			{children}
-		</ContentSection>
-	)
+const ContentList = ({ children }: WithChildren) => {
+	return <ContentSection>{children}</ContentSection>
 }
 
 export default ContentList

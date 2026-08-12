@@ -43,7 +43,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-24.04
-    needs: [ build, test ]
+    needs: [build, test]
 
     steps:
       - name: Download build artifacts

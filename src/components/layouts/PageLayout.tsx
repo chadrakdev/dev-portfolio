@@ -1,21 +1,8 @@
-import { styled, Container } from "@mui/material"
-import { ReactNode } from "react"
+import { PageContainer } from "../styled/StyledContainers"
+import { WithChildren } from "../../types/common"
 
-const StyledContainer = styled(Container)(() => ({
-	padding: "3rem 0.1rem",
-	margin: "0",
-}))
-
-interface LayoutProps {
-    children: ReactNode;
-}
-
-const PageLayout : React.FC<LayoutProps> = ({ children }) => {
-	return (
-		<StyledContainer disableGutters>
-			{children}
-		</StyledContainer>
-	)
+const PageLayout = ({ children }: WithChildren) => {
+	return <PageContainer disableGutters>{children}</PageContainer>
 }
 
 export default PageLayout

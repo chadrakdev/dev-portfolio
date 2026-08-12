@@ -1,4 +1,4 @@
-import { keyframes } from "@mui/material";
+import { keyframes } from "@mui/material"
 
 export const fadeInAnimation = keyframes`
     0% {
@@ -9,4 +9,4 @@ export const fadeInAnimation = keyframes`
         transform: translateY(0%);
         opacity: 1;
     }
-`;
+`

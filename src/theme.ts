@@ -1,12 +1,36 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles"
 
 declare module "@mui/material/styles" {
 	interface Palette {
-		navBackground?: string;
+		navBackground?: string
+		// Full-contrast color for emphasized text/icons (headings, hovered links) that
+		// deliberately ignores the softer text.primary/secondary tones.
+		strongText: string
+		// Background used when hovering a content block (e.g. project/work list items).
+		surfaceHover: string
+		// Translucent overlay used for the global link hover state in CssBaseline.
+		hoverOverlay: string
 	}
 	interface PaletteOptions {
-		navBackground?: string;
+		navBackground?: string
+		strongText: string
+		surfaceHover: string
+		hoverOverlay: string
 	}
+}
+
+const darkPalette = {
+	navBackground: "#18181bfa",
+	strongText: "#ffffff",
+	surfaceHover: "#1d1d21",
+	hoverOverlay: "#ffffff26",
+}
+
+const lightPalette = {
+	navBackground: "#f4f4f5eb",
+	strongText: "#000000",
+	surfaceHover: "#d8d8db",
+	hoverOverlay: "#00000026",
 }
 
 export const darkTheme = createTheme({
@@ -15,7 +39,7 @@ export const darkTheme = createTheme({
 		background: {
 			default: "#18181b",
 		},
-		navBackground: "#18181bfa",
+		...darkPalette,
 		text: {
 			primary: "#d4d4d8",
 			secondary: "#787884",
@@ -32,14 +56,14 @@ export const darkTheme = createTheme({
 					color: "inherit",
 					transition: "background-color 0.3s ease-in, border-radius 0.3s ease-in",
 					"&:hover": {
-						backgroundColor: "#ffffff26",
-						borderRadius: "0.2rem"
+						backgroundColor: darkPalette.hoverOverlay,
+						borderRadius: "0.2rem",
 					},
-				}
+				},
 			},
-		}
+		},
 	},
-});
+})
 
 export const lightTheme = createTheme({
 	palette: {
@@ -47,7 +71,7 @@ export const lightTheme = createTheme({
 		background: {
 			default: "#f4f4f5",
 		},
-		navBackground: "#f4f4f5eb",
+		...lightPalette,
 		text: {
 			primary: "#18181b",
 			secondary: "#373743",
@@ -64,11 +88,11 @@ export const lightTheme = createTheme({
 					color: "inherit",
 					transition: "background-color 0.3s ease-in, border-radius 0.3s ease-in",
 					"&:hover": {
-						backgroundColor: "#00000026",
-						borderRadius: "0.2rem"
+						backgroundColor: lightPalette.hoverOverlay,
+						borderRadius: "0.2rem",
 					},
-				}
+				},
 			},
 		},
 	},
-});
+})

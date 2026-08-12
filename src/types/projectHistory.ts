@@ -1,7 +1,6 @@
 export interface ProjectHistory {
-	id: number,
-    title: string,
-    url: string,
-	tags: string[],
+	id: number
+	title: string
+	url: string
 	description: string
 }
