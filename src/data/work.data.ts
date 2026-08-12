@@ -83,6 +83,6 @@ export const work: WorkHistory[] = [
 			"Investigate and resolve technical issues escalated from support teams, including root cause analysis and code-level fixes.",
 			"Support infrastructure and operational improvements across cloud-hosted environments using technologies.",
 			"Collaborate with cross-functional teams and stakeholders to deliver technical solutions aligned with business and product requirements.",
-		],
-	},
+		]
+	}
 ];
