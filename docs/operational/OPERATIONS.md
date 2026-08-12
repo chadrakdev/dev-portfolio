@@ -218,6 +218,3 @@ have breaking changes that show up as type errors or runtime warnings.
   specifically to disable ESLint's own stylistic rules in favor of
   Prettier. If a new ESLint plugin gets added later, make sure it's
   added *before* `eslintConfigPrettier` in the config array, not after.
-
-- **Something else entirely.**
-  <!-- TODO: fill in as new issues come up — that's the point of this section -->
