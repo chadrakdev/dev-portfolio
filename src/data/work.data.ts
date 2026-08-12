@@ -72,7 +72,7 @@ export const work: WorkHistory[] = [
 	{
 		id: 5,
 		company: "Burendo",
-		position: "Associate Software Engineer",
+		position: "Software Engineer",
 		start: "Oct 2025",
 		isCurrent: true,
 		description: "Developing and maintaining full stack applications and cloud-hosted systems through feature delivery, operational improvements, and structured deployment processes. Working across software engineering, CI/CD, production support, and system reliability.",
