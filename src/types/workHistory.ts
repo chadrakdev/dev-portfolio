@@ -1,14 +1,14 @@
 export interface BaseWorkHistory {
-	id: number;
-	company: string;
-	position: string;
-	start: string;
-	isCurrent: boolean;
-	description: string;
-	technologies: string[];
-	responsibilities: string[];
-  }
-  
-export type WorkHistory = 
+	id: number
+	company: string
+	position: string
+	start: string
+	isCurrent: boolean
+	description: string
+	technologies: string[]
+	responsibilities: string[]
+}
+
+export type WorkHistory =
 	| (BaseWorkHistory & { isCurrent: true; end?: never })
-	| (BaseWorkHistory & { isCurrent: false; end: string });
+	| (BaseWorkHistory & { isCurrent: false; end: string })

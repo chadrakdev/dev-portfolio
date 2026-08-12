@@ -14,10 +14,22 @@ const Home = () => {
 					<Heading>Chadrak H</Heading>
 					<Heading hasPadding>Software Engineer</Heading>
 					<Text>
-						I&apos;m a full-stack developer working in software support, where I build internal tools and tackle complex technical issues. I have hands-on experience with C# and React, developing scalable applications — especially in financial services and real estate. I love problem-solving and always look for ways to improve my skills and build better solutions.
+						I&apos;m a full-stack developer working in software support, where I build internal
+						tools and tackle complex technical issues. I have hands-on experience with C# and React,
+						developing scalable applications — especially in financial services and real estate. I
+						love problem-solving and always look for ways to improve my skills and build better
+						solutions.
 					</Text>
 					<Text>
-						You can check out some of my latest projects <LinkText isBold to="/projects">here</LinkText>, and more on my <LinkText isBold to="https://github.com/chadrakdev">GitHub</LinkText>.
+						You can check out some of my latest projects{" "}
+						<LinkText isBold to="/projects">
+							here
+						</LinkText>
+						, and more on my{" "}
+						<LinkText isBold to="https://github.com/chadrakdev">
+							GitHub
+						</LinkText>
+						.
 					</Text>
 				</PageSection>
 				<Work displayCount={1} />

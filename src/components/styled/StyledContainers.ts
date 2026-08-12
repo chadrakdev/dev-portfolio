@@ -1,11 +1,14 @@
-import { styled, AppBar, Box, Container, List, ListItem } from "@mui/material";
-import { fadeInAnimation } from "../styled/Animations";
+import { styled, AppBar, Box, Container, List, ListItem } from "@mui/material"
+import { fadeInAnimation } from "../styled/Animations"
+
+// Not mode-dependent, so it lives as a plain constant rather than a theme token.
+const CONTENT_BORDER_COLOR = "#35353b62"
 
 export const AppContainer = styled(Container)(({ theme }) => ({
 	maxWidth: "80%",
 	margin: "0 auto",
 	[theme.breakpoints.down("sm")]: {
-		maxWidth: "90%"
+		maxWidth: "90%",
 	},
 }))
 
@@ -20,7 +23,7 @@ export const NavContainer = styled(AppBar)(({ theme }) => ({
 	backdropFilter: "blur(0.1rem)",
 	boxShadow: "none",
 	top: "0",
-	position: "sticky"
+	position: "sticky",
 }))
 
 export const PageContainer = styled(Container)(() => ({
@@ -29,31 +32,34 @@ export const PageContainer = styled(Container)(() => ({
 }))
 
 export const PageSection = styled(Box)(() => ({
-	paddingBottom: "2rem"
+	paddingBottom: "2rem",
 }))
 
 export const ContentSection = styled(Box, {
-	shouldForwardProp: (prop) => !["hasPadding", "hasPaddingBottom", "hasMargin", "hasBorder", "enableHover"].includes(prop as string),
+	shouldForwardProp: (prop) =>
+		!["hasPadding", "hasPaddingBottom", "hasMargin", "hasBorder", "enableHover"].includes(
+			prop as string,
+		),
 })<{
-	hasPadding?: boolean;
-	hasPaddingBottom?: boolean;
-	hasMargin?: boolean;
-	hasBorder?: boolean;
-	enableHover?: boolean;
+	hasPadding?: boolean
+	hasPaddingBottom?: boolean
+	hasMargin?: boolean
+	hasBorder?: boolean
+	enableHover?: boolean
 }>(({ hasPadding, hasPaddingBottom, hasMargin, hasBorder, enableHover, theme }) => ({
 	padding: hasPadding ? "1rem" : "0",
 	marginLeft: hasPadding ? "-0.9rem" : 0,
-  	paddingBottom: hasPaddingBottom ? "2rem" : "0",
-  	borderBottom: hasBorder ? "1px solid #35353b62" : "none",
-  	marginBottom: hasMargin ? "1rem" : "0",
+	paddingBottom: hasPaddingBottom ? "2rem" : "0",
+	borderBottom: hasBorder ? `1px solid ${CONTENT_BORDER_COLOR}` : "none",
+	marginBottom: hasMargin ? "1rem" : "0",
 	borderRadius: "1rem 1rem 0 0",
 	transition: "background-color 0.3s",
-  	...(enableHover && {
+	...(enableHover && {
 		"&:hover": {
-			backgroundColor: theme.palette.mode === "dark" ? "#1d1d21" : "#d8d8db"
-	  },
-  	}),
-}));
+			backgroundColor: theme.palette.surfaceHover,
+		},
+	}),
+}))
 
 export const AnimatedContainer = styled(Box)(() => ({
 	animation: `${fadeInAnimation} 0.8s ease`,
@@ -66,7 +72,7 @@ export const TagList = styled(List)(() => ({
 	flexDirection: "row",
 	flexWrap: "wrap",
 	justifyContent: "start",
-	padding: "0.5rem 0"
+	padding: "0.5rem 0",
 }))
 
 export const TagListItem = styled(ListItem)(({ theme }) => ({
@@ -80,6 +86,6 @@ export const TagListItem = styled(ListItem)(({ theme }) => ({
 	width: "auto",
 	"&:hover": {
 		color: theme.palette.text.primary,
-		backgroundColor: theme.palette.text.secondary
-	}
+		backgroundColor: theme.palette.text.secondary,
+	},
 }))

@@ -1,23 +1,11 @@
-import { styled, Container } from "@mui/material"
-import { ReactNode } from "react"
+import { AppContainer } from "../styled/StyledContainers"
+import { WithChildren } from "../../types/common"
 
-const StyledContainer = styled(Container)(({ theme }) => ({
-	maxWidth: "80%",
-	margin: "0 auto",
-	[theme.breakpoints.down("sm")]: {
-		maxWidth: "90%"
-	},
-}))
-
-interface LayoutProps {
-    children: ReactNode;
-}
-
-const AppLayout : React.FC<LayoutProps> = ({ children }) => {
+const AppLayout = ({ children }: WithChildren) => {
 	return (
-		<StyledContainer maxWidth="sm" disableGutters>
+		<AppContainer maxWidth="sm" disableGutters>
 			{children}
-		</StyledContainer>
+		</AppContainer>
 	)
 }
 
