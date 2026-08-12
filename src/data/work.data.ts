@@ -72,7 +72,7 @@ export const work: WorkHistory[] = [
 	{
 		id: 5,
 		company: "Burendo",
-		position: "Associate Software Engineer",
+		position: "Software Engineer",
 		start: "Oct 2025",
 		isCurrent: true,
 		description: "Developing and maintaining full stack applications and cloud-hosted systems through feature delivery, operational improvements, and structured deployment processes. Working across software engineering, CI/CD, production support, and system reliability.",
@@ -83,6 +83,6 @@ export const work: WorkHistory[] = [
 			"Investigate and resolve technical issues escalated from support teams, including root cause analysis and code-level fixes.",
 			"Support infrastructure and operational improvements across cloud-hosted environments using technologies.",
 			"Collaborate with cross-functional teams and stakeholders to deliver technical solutions aligned with business and product requirements.",
-		],
-	},
+		]
+	}
 ];
